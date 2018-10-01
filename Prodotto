@@ -1,0 +1,110 @@
+//============================================================================
+// Name        : Prodotto.cpp
+// Author      : chen
+// Version     :
+// Copyright   :
+// Description : 两数相乘(利用初中的乘法算法)
+// Date        : 2018年10月1日 20:25:30
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	//创建变量 被乘数,乘数
+	int moltiplicando, moltiplicatore;
+	//输入
+	cout << "Inserisci il moltiplicando: " << endl;
+	cin >> moltiplicando;
+	cout << "Inserisci il moltiplicatore: " << endl;
+	cin >> moltiplicatore;
+
+	//计算被乘数和乘数的数字长度
+	int temp1 = moltiplicando;
+	int temp2 = moltiplicatore;
+	int sommaLen = 0;
+	int len1 = 0;
+	int len2 = 0;
+	while (temp1 != 0) {
+		temp1 /= 10;
+		len1++;
+	}
+	while (temp2 != 0) {
+		temp2 /= 10;
+		len2++;
+	}
+
+	//两数相加的长度
+	sommaLen = len1 + len2;
+	//cout << "Tot len:" << sommaLen << endl;
+
+	//用于打印空格
+	int space1 = 0;
+	while (space1 != sommaLen / 2) {
+		cout << " ";
+		space1++;
+	}
+	//打印被乘数
+	cout << moltiplicando << "\t*" << endl;
+
+	//打印空格
+	int space2 = 0;
+	while (space2 != sommaLen / 2) {
+		cout << " ";
+		space2++;
+	}
+	//打印乘数
+	cout << moltiplicatore << "\t=" << endl;
+
+	//打印分割线
+	int count = 0;
+	while (count != sommaLen) {
+		cout << "-";
+		count++;
+	}
+	cout << endl;
+
+	//计算公式和打印计算过程
+	int risultato = 0;
+	int i = 1;
+	while (moltiplicatore != 0) {
+		int temp = moltiplicando * (moltiplicatore % 10) * i;
+		moltiplicatore /= 10;
+		i *= 10;
+		int calcLen = 0;
+		int nTemp = temp;
+		while (nTemp != 0) {
+			nTemp /= 10;
+			calcLen++;
+		}
+		if (temp == 0) {
+			calcLen += 1;
+		}
+		while (calcLen < sommaLen) {
+			cout << " ";
+			calcLen++;
+		}
+		cout << temp << endl;
+		risultato += temp;
+	}
+	//打印分割线
+	while (count != 0) {
+		cout << "-";
+		count--;
+	}
+	cout << endl;
+
+	int risLen = 0;
+	int tempRis = risultato;
+	while (tempRis != 0) {
+		tempRis /= 10;
+		risLen++;
+	}
+	while (risLen < sommaLen) {
+		cout << " ";
+		risLen++;
+	}
+	//打印计算结果(积)
+	cout << risultato << "\t← Risultato" << endl;
+	return 0;
+}
