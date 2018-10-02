@@ -1,0 +1,37 @@
+//============================================================================
+// Name        : CalcMedia.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : stampa la media di tre numeri
+// Date		   : 2018年10月2日 10:52:10
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	//variabili
+	int x, y, z;	//三个数字
+	int somma;		//三个数的和
+	float media;	//平均值
+	//input
+	cout << "Inserisci il numero X: ";
+	cin >> x;
+	cout << "Inserisci il numero Y: ";
+	cin >> y;
+	cout << "Inserisci il numero Z: ";
+	cin >> z;
+	//calc SOMMA
+	somma = x + y + z;
+
+	//calc MEDIA
+	//int media = somma / 3;
+	//float media = (float)somma /  3;
+	media = somma / (float) 3.0;
+	//float media = somma / 3.0;
+	//double media = (double)somma / 3;
+	//double media = somma / (double) 3;
+	cout << "La media: " << media << endl;
+	return 0;
+}
