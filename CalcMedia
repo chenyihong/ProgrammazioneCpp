@@ -32,6 +32,8 @@ int main() {
 	//float media = somma / 3.0;
 	//double media = (double)somma / 3;
 	//double media = somma / (double) 3;
+	
+	cout << "La media: " << ((double) x + y +z) / 3;	<=== risultato diventa double
 	cout << "La media: " << media << endl;
 	return 0;
 }
