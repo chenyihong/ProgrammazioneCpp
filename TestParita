@@ -1,0 +1,24 @@
+//============================================================================
+// Name        : TestParita.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Test parita`
+// Date        : 2018年10月2日 11:00:02
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+	//double num;	<=== 计算数字的余不可为float/double的数据类型
+	cout << "Inserisci un numero: ";
+	cin >> num;
+	if (num % 2 == 0) {
+		cout << "Il numero e` pari..." << endl;
+	} else {
+		cout << "Il numero e` dispari..." << endl;
+	}
+	return 0;
+}
