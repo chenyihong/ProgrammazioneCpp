@@ -4,7 +4,7 @@
 // Version     :
 // Copyright   : 
 // Description : stampa la media di tre numeri
-// Date		   : 2018年10月2日 10:52:10
+// Date        : 2018年10月2日 10:52:10
 //============================================================================
 
 #include <iostream>
