@@ -11,6 +11,7 @@
 using namespace std;
 
 #define PI 3.14
+const double pi = 3.14;
 
 int main() {
 	/*
