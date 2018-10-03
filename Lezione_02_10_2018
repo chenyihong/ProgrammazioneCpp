@@ -28,12 +28,12 @@ int main() {
 	 * Tipi di dato
 	 * i valori manipolati dai programmi sono suddivisi in insiemi disgiunti
 	 * servono a ottimizzare l`uso della memoria/processo
-	 * +----------------------------------------------------------------------------+
-	 * |char		1 byte		caratteri			2^8				256				|
-	 * |int			4 byte		interi				2^32			+-2147483647	|
-	 * |float		4 byte		floating point		**				**				|
-	 * |double		8 byte		reali				2^64							|
-	 * +----------------------------------------------------------------------------+
+	 * +------------------------------------------------------------------------------------------------------------+
+	 * |char		1 byte		caratteri		2^8		256				|
+	 * |int			4 byte		interi			2^32		+-2147483647			|
+	 * |float		4 byte		floating point		**		**				|
+	 * |double		8 byte		reali			2^64						|
+	 * +------------------------------------------------------------------------------------------------------------+
 	 *
 	 * n % d = n - (n / d * d)
 	 * n - (n / d * d)	<=== usa tre cicli
