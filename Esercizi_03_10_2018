@@ -1,0 +1,59 @@
+//============================================================================
+// Name        : Esercizi_03_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Esercizi_03_10_2018
+// Date        : 2018年10月3日 11:29:56
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+#define PI 3.14
+
+int main() {
+	/*
+	 * [Esercizio 1]
+	 * dato questo frammento di codice
+	 * char x, y ;
+	 * cin >> x >> y ;
+	 * …
+	 * cout << x << y ;
+	 * scrivere una sequenza di comandi che scambia il valore di due identificatori
+	 * (quando gli identificatori sono int o double, si può fare senza un terzo identificatore…)
+	 */
+	char x, y;
+	cout << "Inserisci due char: " << endl;
+	cin >> x >> y;
+
+	char tmp;
+	tmp = x;
+	x = y;
+	y = tmp;
+	cout << "Risultato: ";
+	cout << "[" << x << "][" << y << "]";
+	cout << endl;
+
+	/*
+	 * [Esercizio 2]
+	 * scrivere un programma che prende in input tre reali e li stampa in modo invertito
+	 */
+
+	double a, b, c;
+	cout << "Inserisci tre numeri reali: " << endl;
+	cin >> a >> b >> c;
+
+	cout << "Stampa invertito: [" << c << "][" << b << "][" << a << "]";
+	/*
+	 * [Esercizio 3]
+	 * scrivere un programma che calcola l'area di un cerchio dato il raggio
+	 */
+	double raggio, area;
+	cout << "Inserisci il raggio:";
+	cin >> raggio;
+	//calc area
+	area = PI * raggio * raggio;
+	cout << "Area:[" << area << "]";
+	return 0;
+}
