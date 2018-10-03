@@ -1,0 +1,44 @@
+//============================================================================
+// Name        : Lezione_02_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Lezione_02_10_2018
+// Date        : 2018年10月2日 09:35:16
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	/*
+	 * Identificatori o variabili(place holder)
+	 * sono NOMI SIMBOLICI ed associati ad un VALORE
+	 * possono essere SEQUENZE di LETTERE,CIFRE e il simbolo '_'
+	 * iniziano con una lettera oppure '_'
+	 * NON possono usare le parole chiave (ES: int,float...)
+	 * e' il nome associato ad una cella di memoria utilizzata per contenere valori
+	 * nome FISICO(HEX)			<=== indirizzo di memoria
+	 * nome LOCICO(simbolico)	<=== nomi simbolici
+	 * 每次结束程序,会清空内存,再次使用时,地址会改变
+	 * GRAMMATICA:{SIMBOLO|LETTERA}{CIFRA}
+	 * 			SIMBOLO='_'
+	 * 			LETTERA=a-z，A-Z
+	 * 			CIFRA=1,...,9
+	 * Tipi di dato
+	 * i valori manipolati dai programmi sono suddivisi in insiemi disgiunti
+	 * servono a ottimizzare l`uso della memoria/processo
+	 * +----------------------------------------------------------------------------+
+	 * |char		1 byte		caratteri			2^8				256				|
+	 * |int			4 byte		interi				2^32			+-2147483647	|
+	 * |float		4 byte		floating point		**				**				|
+	 * |double		8 byte		reali				2^64							|
+	 * +----------------------------------------------------------------------------+
+	 *
+	 * n % d = n - (n / d * d)
+	 * n - (n / d * d)	<=== usa tre cicli
+	 * n % d			<=== usa un solo ciclo
+	 */
+
+	return 0;
+}
