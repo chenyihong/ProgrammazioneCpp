@@ -1,0 +1,21 @@
+//============================================================================
+// Name        : GenRandom.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : random()
+// Date        : 2018年10月3日 11:52:01
+//============================================================================
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+	srand(time(0));
+	//srand(2);
+	cout << "Numero generato casualmente [0~99]: [" << rand() % 100 << "]"
+			<< endl;
+	return 0;
+}
