@@ -1,0 +1,122 @@
+//============================================================================
+// Name        : Lezione_08_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Lezione_08_10_2018 con gli esercizi
+// Date        : 2018年10月8日 13:31:29
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	/*
+	 * IF - THEM - ELSE
+	 * if (condition) Statement_True
+	 * else	Statement_False
+	 *
+	 * CONDIZIONI
+	 * 1.operatori relazionali:
+	 *   [<]	minore di
+	 *   [>]	maggiore di
+	 *   [<=]	minore o uguale a
+	 *   [>=]	maggiore o uguale a
+	 * 2.operatori di uguaglianza:
+	 *   [==]	uguale
+	 *   [!=]	diverso da
+	 * 3.operatori logici:
+	 *   [&&]	and		两个op都为True的情况下，结果为True，其余的则为False
+	 *   [||]	or		两个op都为False的情况下，结果为False，其余则为True
+	 *   [!]  	not		True的为False，False的为True
+	 *
+	 * SEQUENZA DI COMMANDI
+	 *  gruppo di istruzioni racchiuse tra graffe
+	 *  {
+	 *  ...
+	 *  codice
+	 *  ...
+	 *  }
+	 *  ed eseguite sequenzialmente
+	 */
+	cout << "Inserisci un carattere o un numero: " << endl;
+	char c;
+	cin >> c;
+	if ((c >= '0') && (c <= '9')) {
+		cout << "Numero inserito: \t[" << c << "]" << endl;
+	} else {
+		cout << "E` un simbolo: \t[" << c << "]" << endl;
+	}
+
+	/*
+	 * Esercizio 1:
+	 * qual e' il complemento di
+	 * (x>y) && (ch=='a' || ch=='b') ?
+	 * Soluzione:
+	 * !(A && B)
+	 * !A || !B
+	 * !A <=== !(x>y) <=== (x<=y)
+	 * !B <=== !(ch=='a' || ch=='b') <=== ((!ch=='a') && !(ch=='b')) <=== ((ch!='a') && (ch!='b'))
+	 * complemento:(x<=y) || ((ch!='a') && (ch!='b'))
+	 */
+
+	/*
+	 * Esercizio 2:
+	 * scrivere un programma che prende in input due interi
+	 * e restituisce true se sono uguali e false altrimenti
+	 */
+	int a, b;
+	cout << "Inserisci il numero intero [a]" << endl;
+	cin >> a;
+	cout << "Inserisci il numero intero [b]" << endl;
+	cin >> b;
+	//soluzione 1:
+	if (a == b) {
+		cout << "True" << endl;
+	} else {
+		cout << "False" << endl;
+	}
+
+	//soluzione 2:
+	cout << (a == b) << endl; // <=== 0为False, 1为True
+
+	/*
+	 * Esercizio 3:
+	 * scrivere un programma che prende in input tre numeri
+	 * e un carattere a scelta tra '-' e '/'
+	 * e stampa in output una tabella
+	 * con la differenza o il rapporto dei numeri a due a due
+	 *
+	 * Esempio: se i valori in input sono 2, 7, 3, e ' - ' stampa
+	 *					2	7	3
+	 *				2	0	-5	-1
+	 *				7	5	0	4
+	 *				3	1	-4	0
+	 *
+	 *	!!!WITHOUT ARRAY!!!
+	 */
+
+	int x, y, z;
+	char s;
+	cout << "Inserisci il numero [x]" << endl;
+	cin >> x;
+	cout << "Inserisci il numero [y]" << endl;
+	cin >> y;
+	cout << "Inserisci il numero [z]" << endl;
+	cin >> z;
+	cout << "Inserisci un carattere a scelta tra '-' e '/'" << endl;
+	cin >> s;
+	if (s == '-') {
+		cout << s << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << x << "\t" << x - x << "\t" << x - y << "\t" << x - z << endl;
+		cout << y << "\t" << y - x << "\t" << y - y << "\t" << y - z << endl;
+		cout << z << "\t" << z - x << "\t" << z - y << "\t" << z - z << endl;
+	} else if (s == '/') {
+		cout << s << "\t" << x << "\t" << y << "\t" << z << endl;
+		cout << x << "\t" << x / x << "\t" << x / y << "\t" << x / z << endl;
+		cout << y << "\t" << y / x << "\t" << y / y << "\t" << y / z << endl;
+		cout << z << "\t" << z / x << "\t" << z / y << "\t" << z / z << endl;
+	} else {
+		cout << "Devi inserire un carattere a scelta tra '-' e '/'" << endl;
+	}
+}
