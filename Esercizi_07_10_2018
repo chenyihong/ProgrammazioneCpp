@@ -1,0 +1,86 @@
+//============================================================================
+// Name        : Esercizi_07_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description :
+// Date        : 2018年10月7日 20:51:45
+//============================================================================
+
+#include <iostream>
+
+#include <math.h>
+using namespace std;
+
+int main() {
+	/*
+	 * [Esercizio 1]
+	 * Dato un prezzo in euro (inclusi centesimi)
+	 * dire quante e quali monete sono necessarie per pagarlo
+	 * (con un numero minimo di monete)
+	 * esempio: input: 15.74
+	 * output:
+	 * monete da 2 euro: 7
+	 * monete da 1 euro: 1
+	 * monete da 50 cent: 1
+	 * monete da 20 cent: 1
+	 * monete da 2 cent: 2
+	 */
+
+	double prezzo = 0;
+	int due_euro, un_euro, cinquanta_cent, venti_cent, due_cent;
+	cout << "Inserisci il prezzo:" << endl;
+	cin >> prezzo;
+
+	// 2e
+	due_euro = (int) (prezzo / 2);
+	cout << "Moneta da 2 euro: \t[" << due_euro << "]" << endl;
+	prezzo = prezzo - (due_euro * 2);
+
+	//1e
+	un_euro = (int) prezzo;
+	prezzo = (prezzo - un_euro) * 100;
+	cout << "Moneta da 1 euro: \t[" << un_euro << "]" << endl;
+
+	//50c
+	cinquanta_cent = (int) (prezzo / 50);
+	cout << "Moneta da 50 cent: \t[" << cinquanta_cent << "]" << endl;
+	prezzo = prezzo - (cinquanta_cent * 50);
+
+	//20c
+	venti_cent = (int) (prezzo / 20);
+	cout << "Moneta da 20 cent: \t[" << venti_cent << "]" << endl;
+	prezzo = prezzo - (venti_cent * 20);
+
+	//2c
+	due_cent = (int) (prezzo / 2);
+	cout << "Moneta da 2 cent: \t[" << due_cent << "]" << endl;
+	prezzo = prezzo - (due_cent * 2);
+
+	//resto
+	cout << "Resto: \t[" << (int) prezzo << "]" << endl;
+
+	//end
+	cout << "----------------------" << endl;
+	/*
+	 * [Esercizio 2]
+	 * Data la lunghezza di due cateti di un triangolo rettangolo
+	 * calcolare la lunghezza dell'ipotenusa
+	 */
+
+	double cateti_1, cateti_2, ipotenusa;
+
+	//input
+	cout << "Inserisci il cateto [1]: " << endl;
+	cin >> cateti_1;
+	cout << "Inserisci il cateto [2]: " << endl;
+	cin >> cateti_2;
+
+	//calc ipotenusa
+	ipotenusa = sqrt((cateti_1 * cateti_1) + (cateti_2 * cateti_2));
+	cout << "Ipotenusa: \t[" << ipotenusa << "]" << endl;
+
+	//end
+	cout << "----------------------" << endl;
+	return 0;
+}
