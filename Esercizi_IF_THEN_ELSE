@@ -46,20 +46,22 @@ int main() {
 
 	//Soluzione con Array
 	/*
+
 	 const int len = 4;
 	 char myChar[len];
 	 for (int i = 0; i <= len; i++) {
-	 cout << "Inserisci il carattere ["<<i<<"]: \t";
+	 cout << "Inserisci il carattere [" << i << "]: \t";
 	 cin >> myChar[i];
 	 }
 
 	 cout << "Lettere Maiuscole: \t[";
 	 for (int j = 0; j <= len; j++) {
-	 if(myChar[j]>='A' && myChar[j]<='Z'){
+	 if (myChar[j] >= 'A' && myChar[j] <= 'Z') {
 	 cout << myChar[j];
 	 }
 	 }
-	 cout << "]"<<endl;
+	 cout << "]" << endl;
+
 	 */
 
 	/*
@@ -171,6 +173,9 @@ int main() {
 	 * [Esercizio 5]
 	 * Scrivere un programma che prende 4 interi e
 	 * stampa l’intero tra i quattro più vicino al valor medio
+	 * 输入4个整数
+	 * 输出最接近平均值的整数
+	 * !需要注意如果出现两个相同的结果
 	 */
 
 	/*
@@ -193,6 +198,8 @@ int main() {
 	 } else if (abs(r - media) <= temp) {
 	 temp = r - media;
 	 risultato = r;
+	 }else{
+	 	 risultato=q;
 	 }
 
 	 cout << "Il numero intero piu` vicino al valor medio: \t[" << risultato
