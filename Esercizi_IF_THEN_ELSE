@@ -176,35 +176,34 @@ int main() {
 	 * 输入4个整数
 	 * 输出最接近平均值的整数
 	 * !需要注意如果出现两个相同的结果
+	 * !需要注意输入的整数位负数
 	 */
 
-	/*
-	 int q, w, e, r;
-	 double media;
-	 int risultato;
-	 cout << "Inserisci 4 numeri interi: " << endl;
-	 cin >> q >> w >> e >> r;
-	 media = (q + w + e + r) / (double)4;
-	 cout << "La media di 4 numeri: \t[" << media << "]" << endl;
+	int q, w, e, r;
+	double media;
+	int risultato;
+	cout << "Inserisci 4 numeri interi: " << endl;
+	cin >> q >> w >> e >> r;
+	media = (q + w + e + r) / (double) 4;
+	cout << "La media di 4 numeri: \t[" << media << "]" << endl;
 
-	 int temp = abs(q - media);
-	 risultato = q;
-	 if ((w - media) <= temp) {
-	 temp = w - media;
-	 risultato = w;
-	 } else if (abs(e - media) <= temp) {
-	 temp = e - media;
-	 risultato = e;
-	 } else if (abs(r - media) <= temp) {
-	 temp = r - media;
-	 risultato = r;
-	 }else{
-	 	 risultato=q;
-	 }
+	double temp = abs(q - media);
+	risultato = q;
+	if ((w - media) <= temp) {
+		temp = w - media;
+		risultato = w;
+	}
+	if (abs(e - media) <= temp) {
+		temp = e - media;
+		risultato = e;
+	}
+	if (abs(r - media) <= temp) {
+		temp = r - media;
+		risultato = r;
+	}
 
-	 cout << "Il numero intero piu` vicino al valor medio: \t[" << risultato
-	 << "]" << endl;
+	cout << "Il numero intero piu` vicino al valor medio: \t[" << risultato
+			<< "]" << endl;
 
-	 */
 	return 0;
 }
