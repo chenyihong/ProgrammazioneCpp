@@ -70,20 +70,26 @@ int main() {
 	 */
 
 	/*
+
 	 int x, y, z;
 	 cin >> x >> y >> z;
 	 if ((y % x == 0) && (z % x == 0)) {
-	 cout << "1"<<endl;
-	 cout << x <<"e` divisore di "<<y<<" e "<<z<<endl;
+	 cout << "1" << endl;
+	 cout << x << "e` divisore di " << y << " e " << z << endl;
 	 }
 	 if ((x % y == 0) && (z % y == 0)) {
-	 cout << "1"<<endl;
-	 cout << y <<"e` divisore di "<<x<<" e "<<z<<endl;
+	 cout << "1" << endl;
+	 cout << y << "e` divisore di " << x << " e " << z << endl;
 	 }
 	 if ((x % z == 0) && (y % z == 0)) {
-	 cout << "1"<<endl;
-	 cout << z <<"e` divisore di "<<x<<" e "<<y<<endl;
+	 cout << "1" << endl;
+	 cout << z << "e` divisore di " << x << " e " << y << endl;
 	 }
+	 if ((x % y != 0) || (x % z != 0) || (y % x != 0) || (y % z != 0)
+	 || (z % x != 0) || (z % y != 0)) {
+	 cout << 0;
+	 }
+
 	 */
 
 	/*
@@ -168,30 +174,30 @@ int main() {
 	 */
 
 	/*
-	int q, w, e, r;
-	double media;
-	int risultato;
-	cout << "Inserisci 4 numeri interi: " << endl;
-	cin >> q >> w >> e >> r;
-	media = (q + w + e + r) / (double)4;
-	cout << "La media di 4 numeri: \t[" << media << "]" << endl;
+	 int q, w, e, r;
+	 double media;
+	 int risultato;
+	 cout << "Inserisci 4 numeri interi: " << endl;
+	 cin >> q >> w >> e >> r;
+	 media = (q + w + e + r) / (double)4;
+	 cout << "La media di 4 numeri: \t[" << media << "]" << endl;
 
-	int temp = abs(q - media);
-	risultato = q;
-	if ((w - media) <= temp) {
-		temp = w - media;
-		risultato = w;
-	} else if (abs(e - media) <= temp) {
-		temp = e - media;
-		risultato = e;
-	} else if (abs(r - media) <= temp) {
-		temp = r - media;
-		risultato = r;
-	}
+	 int temp = abs(q - media);
+	 risultato = q;
+	 if ((w - media) <= temp) {
+	 temp = w - media;
+	 risultato = w;
+	 } else if (abs(e - media) <= temp) {
+	 temp = e - media;
+	 risultato = e;
+	 } else if (abs(r - media) <= temp) {
+	 temp = r - media;
+	 risultato = r;
+	 }
 
-	cout << "Il numero intero piu` vicino al valor medio: \t[" << risultato
-			<< "]" << endl;
+	 cout << "Il numero intero piu` vicino al valor medio: \t[" << risultato
+	 << "]" << endl;
 
-	*/
+	 */
 	return 0;
 }
