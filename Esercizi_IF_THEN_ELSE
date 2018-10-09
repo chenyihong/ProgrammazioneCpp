@@ -1,0 +1,197 @@
+//============================================================================
+// Name        : Esercizi_IF_THEN_ELSE.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Esercizi
+// Date        : 2018年10月8日 15:26:56 ===> 2018年10月9日 09:30:09
+//============================================================================
+
+#include <iostream>
+/*
+ * la libreria usato solo quinto esercizio ===> abs();
+ */
+#include <cmath>
+#include <math.h>
+using namespace std;
+
+int main() {
+	/*
+	 * [Esercizio 1]
+	 * Scrivere un “firewall” che prende in input 5 caratteri
+	 * e stampa solamente le lettere minuscole
+	 */
+
+	//Soluzione senza Array
+	/*
+	 char a, b, c, d, e;
+	 cout << "Inserisci 5 caratteri: "<<endl;
+	 cin >> a >> b >> c >> d >> e;
+	 if (a >= 'A' && a <= 'Z') {
+	 cout << a << endl;
+	 }
+	 if (b >= 'A' && b <= 'Z') {
+	 cout << b << endl;
+	 }
+	 if (c >= 'A' && c <= 'Z') {
+	 cout << c << endl;
+	 }
+	 if (d >= 'A' && d <= 'Z') {
+	 cout << d << endl;
+	 }
+	 if (e >= 'A' && e <= 'Z') {
+	 cout << e << endl;
+	 }
+	 */
+
+	//Soluzione con Array
+	/*
+	 const int len = 4;
+	 char myChar[len];
+	 for (int i = 0; i <= len; i++) {
+	 cout << "Inserisci il carattere ["<<i<<"]: \t";
+	 cin >> myChar[i];
+	 }
+
+	 cout << "Lettere Maiuscole: \t[";
+	 for (int j = 0; j <= len; j++) {
+	 if(myChar[j]>='A' && myChar[j]<='Z'){
+	 cout << myChar[j];
+	 }
+	 }
+	 cout << "]"<<endl;
+	 */
+
+	/*
+	 * [Esercizio 2]
+	 * Scrivere un programma che prende 3 interi
+	 * e stampa 1 se uno dei tre è divisore degli altri due
+	 * 0 altrimenti (fare due versioni: una con l’if e una senza)
+	 */
+
+	/*
+	 int x, y, z;
+	 cin >> x >> y >> z;
+	 if ((y % x == 0) && (z % x == 0)) {
+	 cout << "1"<<endl;
+	 cout << x <<"e` divisore di "<<y<<" e "<<z<<endl;
+	 }
+	 if ((x % y == 0) && (z % y == 0)) {
+	 cout << "1"<<endl;
+	 cout << y <<"e` divisore di "<<x<<" e "<<z<<endl;
+	 }
+	 if ((x % z == 0) && (y % z == 0)) {
+	 cout << "1"<<endl;
+	 cout << z <<"e` divisore di "<<x<<" e "<<y<<endl;
+	 }
+	 */
+
+	/*
+	 * [Esercizio 3]
+	 * Scrivere un programma che simula una calcolatrice tascabile
+	 * con le operazioni “+”, “-”, “*”, “/” e “%”;
+	 * cioè prende un intero, uno dei simboli precedenti e un altro intero
+	 * e calcola il risultato dell’operazione relativa
+	 */
+
+	/*
+	 int num_1, num_2;
+	 char op;
+	 cout << "Inserisci il primo numero: ";
+	 cin >> num_1;
+	 cout << "Inserisci il secondo numero: ";
+	 cin >> num_2;
+	 cout << "Inserisci il operazione: ";
+	 cin >> op;
+
+	 if (op == '+') {
+	 cout << "La somma di due numeri interi: \t[" << num_1 + num_2 << "]"
+	 << endl;
+	 }
+	 if (op == '-') {
+	 cout << "La differenza di due numeri interi: \t[" << num_1 - num_2
+	 << "]" << endl;
+	 }
+	 if (op == '*') {
+	 cout << "Il prodotto di due numeri interi: \t[" << num_1 * num_2 << "]"
+	 << endl;
+	 }
+	 if (op == '/') {
+	 cout << "Il quoziente di due numeri interi: \t[" << num_1 / num_2 << "]"
+	 << endl;
+	 }
+	 if (op == '%') {
+	 cout << "Il resto di due numeri interi: \t[" << num_1 % num_2 << "]"
+	 << endl;
+	 }
+	 */
+
+	/*
+	 * [Esercizio 4]
+	 * Scrivere un programma che prende 3 interi e
+	 * li stampa in maniera ordinata
+	 */
+
+	//senza while
+	/*
+	 int a, b, c;
+	 cout << "Inserisci tre numeri interi: ";
+	 cin >> a >> b >> c;
+	 int temp;
+	 if (a >= b) {
+	 temp = a;
+	 a = b;
+	 b = temp;
+	 }
+	 if (b >= c) {
+	 temp = c;
+	 c = b;
+	 b = temp;
+	 }
+	 if (a >= c) {
+	 temp = c;
+	 c = a;
+	 a = temp;
+	 }
+	 if (a >= b) {
+	 temp = a;
+	 a = b;
+	 b = temp;
+	 }
+	 cout << a << "\t" << b << "\t" << c << endl;
+	 */
+
+	/*
+	 * [Esercizio 5]
+	 * Scrivere un programma che prende 4 interi e
+	 * stampa l’intero tra i quattro più vicino al valor medio
+	 */
+
+	/*
+	int q, w, e, r;
+	double media;
+	int risultato;
+	cout << "Inserisci 4 numeri interi: " << endl;
+	cin >> q >> w >> e >> r;
+	media = (q + w + e + r) / (double)4;
+	cout << "La media di 4 numeri: \t[" << media << "]" << endl;
+
+	int temp = abs(q - media);
+	risultato = q;
+	if ((w - media) <= temp) {
+		temp = w - media;
+		risultato = w;
+	} else if (abs(e - media) <= temp) {
+		temp = e - media;
+		risultato = e;
+	} else if (abs(r - media) <= temp) {
+		temp = r - media;
+		risultato = r;
+	}
+
+	cout << "Il numero intero piu` vicino al valor medio: \t[" << risultato
+			<< "]" << endl;
+
+	*/
+	return 0;
+}
