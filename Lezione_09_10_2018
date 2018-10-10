@@ -1,0 +1,128 @@
+//============================================================================
+// Name        : Lezione_09_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Lezione_09_10_2018 + Esercizi
+// Date        : 2018年10月9日 10:29:17 ===> 2018年10月10日 10:05:34
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	/*
+	 * Commandi Iterativi:
+	 * ripetizione della stessa operazione tante volte...
+	 * 1.for
+	 * 2.while ===> sintassi: while(condition){...statement...}
+	 */
+
+	/*
+	 * [Esercizio 1]
+	 * Scrivere un programma che prende un intero n
+	 * e calcola la somma dei numeri minori di n
+	 */
+
+	/*
+
+	 int n;
+	 cout << "Inserisci il numero intero [n]: \t";
+	 cin >> n;
+	 int somma = 0;
+	 while (n != 0) {
+	 somma += n;
+	 n--;
+	 }
+	 cout << "La somma dei numeri minori di n: \t[" << somma << "]";
+
+	 */
+
+	/*
+	 * [Esercizio 2]
+	 * Scrivere un programma che prende un intero n
+	 * e calcola il fattoriale di n (!0 =1 ; !n = 1*2*…*n)
+	 */
+
+	int n;
+	int risultato = 1;
+	cout << "Inserisci il numero intero [n]: \t";
+	cin >> n;
+
+	int temp = n;
+	if (temp < 0) { // input != negativo （计算的阶乘的数字不可为负数）
+		cout << "Il numero inserito e` negativo..." << endl;
+	} else if (temp >= 0) {
+		// 当输入的数字大于等于0，阶乘的结果为1
+		while (temp > 1) {
+			risultato *= temp;
+			temp--;
+		}
+		cout << "Il fattoriale di [" << n << "] = [" << risultato << "]"
+				<< endl;
+	}
+
+	/*
+	 * [Esercizio 3]
+	 * Scrivere un programma che prende n
+	 * e ritorna la parte intera della radice quadrata di n
+	 */
+
+	/*
+
+	 double input;
+	 int risultato;
+	 int count = 0;
+	 cout << "Inserisci un numero n: \t";
+	 cin >> input;
+	 if (input < 0) {
+	 cout << "Err input(numero inserito e` minore di 0)..." << endl;
+	 }
+	 if (input == 0) {
+	 risultato = 0;
+	 }
+	 if (input > 0) {
+	 count = 1;
+	 while ((count * count) <= input) {
+	 count++;
+	 risultato = count - 1;
+	 }
+
+	 }
+	 cout << "La radice quadrata di [" << input << "] = [" << risultato << "]"
+	 << endl;
+
+	 */
+
+	/*
+	 * [Esercizio 4]
+	 * Scrivere un programma che prende n
+	 * e ritorna la parte intera del logaritmo in base 2 di n
+	 */
+
+	/*
+
+	 int n;
+	 int risultato;
+	 cout << "Inserisci un numero n: \t";
+	 cin >> n;
+	 int temp=n;
+	 if (temp > 0) {
+	 while (temp % 2 == 0) {
+	 temp /= 2;
+	 risultato++;
+	 }
+	 }
+	 cout << "Il risultato del logaritmo in base 2 di [" << n << "] = ["
+	 << risultato << "]" << endl;
+
+	 */
+
+	/*
+	 * [Esercizio 5]
+	 * Scrivere un programma che prende n
+	 * e ritorna la radice quadrata di n calcolata con il metodo di Bombelli
+	 */
+
+	return 0;
+}
