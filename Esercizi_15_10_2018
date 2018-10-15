@@ -1,0 +1,129 @@
+//============================================================================
+// Name        : Esercizi_15_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : Esercizi
+// Date        : 2018年10月15日 13:38:36
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	/*
+	 * [Esercizio 1]
+	 * Scrivere un programma che prende in input un numero intero n
+	 * e stampa n asterischi
+	 */
+
+	/*
+	 int n;
+	 cout<<"Inserisci un numero intero: \t";
+	 cin >> n;
+	 for(int i=0;i<n;i++){
+	 cout << "*";
+	 }
+	 cout << endl;
+
+	 */
+
+	/*
+	 * [Esercizio 2]
+	 * Scrivere un programma che chiede in input un numero:
+	 * se è positivo lo stampa e termina
+	 * se è negativo o nullo lo rifiuta e ne chiede un altro.
+	 */
+
+	/*
+
+	 int n;
+	 cout << "Insersci il numero: ";
+	 cin >> n;
+
+	 if (n > 0) {
+	 cout << n << endl;
+	 }
+	 while (n <= 0) {
+	 if (n <= 0) {
+	 cout << "Inserisci un nuemro >= 0:";
+	 cin >> n;
+	 if (n > 0) {
+	 cout << n << endl;
+	 }
+	 }
+
+	 }
+
+	 */
+
+	/*
+	 * [Esercizio 2*]
+	 * Scrivere un programma che chiede in input un numero:
+	 * se e` primo stampa "primo"
+	 * altrimenti stampa "non_primo"
+	 */
+
+	/*
+
+	 int input;
+	 cout << "Inserisci un numero: \t";
+	 cin >> input;
+	 if ((input % 2 == 0) || (input % 3 == 0) || (input % 5 == 0)) {
+	 cout << "non_primo" << endl;
+	 } else {
+	 cout << "primo" << endl;
+	 }
+
+	 */
+
+	/*
+	 * [Esercizio 3]
+	 * Scrivere un programma che interroga uno studente sulla divisibilità:
+	 * prende in input un numero intero
+	 * e chiede allo studente di inserire un divisore.
+	 * Il programma termina solo quando lo studente inserisce un divisore corretto.
+	 */
+
+	/*
+
+	int numero;
+	cout << "Inserisci un numero intero: \t";
+	cin >> numero;
+	cout << endl;
+	int divisore;
+	cout << "Inserisci il divisore: \t";
+	cin >> divisore;
+
+	while (numero % divisore != 0) {
+		cout << "Inserisci il divisore corretto: \t";
+		cin >> divisore;
+	}
+	cout << "divisore corretto..." << endl;
+
+	*/
+
+	/*
+	 * [Esercizio 4]
+	 * Scrivere un programma che prende un intero
+	 * stampa la somma delle sue cifre
+	 *
+	 */
+
+	/*
+
+	 int n;
+	 cout << "Inserisci un numero: ";
+	 cin >> n;
+	 int sommaCifre = 0;
+	 int temp = n;
+	 while (temp !=0) {
+	 sommaCifre += temp % 10;
+	 temp /= 10;
+	 }
+	 cout << "Somma delle cifre = " << sommaCifre << endl;
+
+	 */
+
+	return 0;
+}
