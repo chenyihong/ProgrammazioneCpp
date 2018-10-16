@@ -1,0 +1,65 @@
+//============================================================================
+// Name        : Esercizi_16_10_2018.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : 
+// Date        : 2018年10月16日 09:36:55
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	/*
+	 * [Esercizio 1]
+	 * Scrivere un programma che stampa un triangolo isoscele dell’altezza desiderata presa in input.
+	 * Ad esempio, se l'altezza è 4 stampa:
+	 *		  *
+	 *	   ***
+	 *	  *****
+	 *	 *******
+	 */
+
+	/*
+
+	 int alt;
+	 cout << "Inserisci altezza: \t";
+	 cin >> alt;
+	 for (int i = 1; i <= alt; i++) {
+	 for (int space = alt - i; space > 0; space--) {
+	 cout << " ";
+	 }
+	 for (int c = 0; c < 2 * i - 1; c++) {
+	 cout << "*";
+	 }
+	 cout << endl;
+	 }
+
+	 */
+
+	/*
+	 * [Esercizio 2]
+	 * Scrivere un programma che chiede all'utente dei numeri interi
+	 * e scrive se sono primi o non primi
+	 * Il programma termina quando l'utente inserisce il numero 0
+	 */
+
+	/*
+
+	int n;
+	do {
+		cout << "Inserisci un numero intero: \t";
+		cin >> n;
+		if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0) {
+			cout << "Numero non primo" << endl;
+		} else {
+			cout << "Numero primo" << endl;
+		}
+	} while (n != 0);
+	cout << "end..." << endl;
+
+	*/
+
+	return 0;
+}
