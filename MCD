@@ -1,0 +1,48 @@
+//============================================================================
+// Name        : MCD.cpp
+// Author      : chen
+// Version     :
+// Copyright   : 
+// Description : calcola massimo comune divisore di due numeri
+// Date        : 2018年10月16日 10:32:29
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n1, n2;
+	cout << "Inserisci due numeri interi： " << endl;
+	cin >> n1 >> n2;
+	int mcd = 1;
+	do {
+		if (n1 > 0 && n2 > 0) {
+			if (n1 % n2 == 0) {
+				mcd *= n2;
+			}
+			if (n2 % n1 == 0) {
+				mcd *= n1;
+			}
+			if (n1 % 5 == 0 && n2 % 5 == 0) {
+				n1 /= 5;
+				n2 /= 5;
+				mcd *= 5;
+			}
+			if (n1 % 3 == 0 && n2 % 3 == 0) {
+				n1 /= 3;
+				n2 /= 3;
+				mcd *= 3;
+			}
+			if (n1 % 2 == 0 && n2 % 2 == 0) {
+				n1 /= 2;
+				n2 /= 2;
+				mcd *= 2;
+			}
+		}else{
+			//input negativo da implementare...
+		}
+	} while ((n1 % 2 == 0 && n2 % 2 == 0) || (n1 % 3 == 0 && n2 % 3 == 0)
+			|| (n1 % 5 == 0 && n2 % 5 == 0));
+	cout << mcd;
+	return 0;
+}
